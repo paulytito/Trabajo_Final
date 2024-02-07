@@ -200,5 +200,5 @@ if __name__ == "__main__":
     end_time = time.time()
     elapsed_time = end_time - start_time
 
-    print("Procesameinto completado")
+    print("Procesamiento completado")
     print(f"Tiempo total de ejecucion: {elapsed_time:.2f} segundos")

@@ -183,9 +183,9 @@ class CountObject():
 
         return frame
 
-    def process_video(self):
+    #def process_video(self):
 
-        sv.process_video(source_path=self.input_video_path, target_path=self.output_video_path, callback=self.process_frame)
+        #sv.process_video(source_path=self.input_video_path, target_path=self.output_video_path, callback=self.process_frame)
 
 
 if __name__ == "__main__":

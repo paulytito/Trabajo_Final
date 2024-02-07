@@ -131,7 +131,7 @@ class CountObject():
 
       out = cv2.VideoWriter(self.output_video_path, cv2.VideoWriter_fourcc(*'mp4v'), frame_rate, (frame_width, frame_height))
 
-      while TRUE:
+      while True:
         ret, frame = cap.read()
         if not ret:
           break

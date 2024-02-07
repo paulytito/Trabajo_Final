@@ -148,9 +148,9 @@ class CountObject():
       out.release()
       cv2.destroyAllWindows()
 
-      column_names = ['Tiempo'] + ['Poligono {i+1}' for i in range (len(self.polygons))]
+      column_names = ['Tiempo'] + [f'Poligono {i+1}' for i in range (len(self.polygons))]
       df = pd.DataFrame(self.time_records, columns=column_names)
-      df.to_csv('resultadosFPS{fps_valor}.csv', index=False)
+      df.to_csv(f'resultadosFPS{fps_valor}.csv', index=False)
 
 
 

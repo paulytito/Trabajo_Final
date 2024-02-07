@@ -136,11 +136,11 @@ class CountObject():
         if not ret:
           break
 
-          processed_frame = self.process_frame(frame, self.time)
-          out.write(processed_frame)
+        processed_frame = self.process_frame(frame, self.time)
+        out.write(processed_frame)
 
-          self.time +=1
-          if frame_rate != original_fps:
+        self.time +=1
+        if frame_rate != original_fps:
             for _ in range (original_fps // frame_rate - 1):
               cap.read()
 
@@ -148,9 +148,9 @@ class CountObject():
       out.release()
       cv2.destroyAllWindows()
 
-      column_names = ['Tiempo'] + [f'Poligono {i+1}' for i in range (len(self.polygons))]
+      column_names = ['Tiempo'] + ['Poligono {i+1}' for i in range (len(self.polygons))]
       df = pd.DataFrame(self.time_records, columns=column_names)
-      df.to_csv(f'resultadosFPS{fps_valor}.csv', index=False)
+      df.to_csv('resultadosFPS{fps_valor}.csv', index=False)
 
 
 

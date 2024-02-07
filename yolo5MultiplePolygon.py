@@ -117,7 +117,7 @@ class CountObject():
         ]
 
         self.time = 0
-        self.time_records = []
+        self.time_records = [ ]
 
     def process_video(self):
       cap = cv2.VideoCapture(self.input_video_path)

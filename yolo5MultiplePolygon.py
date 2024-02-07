@@ -163,12 +163,7 @@ class CountObject():
 
         counts = [0] * len(self.polygons)
 
-        #for zone, zone_annotator, box_annotator in zip(self.zones, self.zone_annotators, self.box_annotators):
-            #mask = zone.trigger(detections=detections)
-            #detections_filtered = detections[mask]
-            #frame = box_annotator.annotate(scene=frame, detections=detections_filtered, skip_label=True)
-            #frame = zone_annotator.annotate(scene=frame)
-            #counts[index] = len(detections_filtered)
+        
 
         for index, (zone, zone_annotator, box_annotator) in enumerate (
             zip(self.zones, self.zone_annotators, self.box_annotators)
@@ -183,9 +178,7 @@ class CountObject():
 
         return frame
 
-    #def process_video(self):
-
-        #sv.process_video(source_path=self.input_video_path, target_path=self.output_video_path, callback=self.process_frame)
+    
 
 
 if __name__ == "__main__":
